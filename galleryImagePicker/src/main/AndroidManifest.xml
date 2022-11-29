@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 读取媒体文件 -->
+    <uses-permission android:name="com.android.providers.media.MediaProvider" />
+    <!-- 往SDCard写入数据权限,将更新的APK临时存在SD卡里 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 访问Internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true" >
+        <activity
+            android:name="com.ajitmaurya.galleryimagepicker.activity.crop.MultiImageCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.ajitmaurya.galleryimagepicker.activity.preview.MultiImagePreviewActivity"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.ajitmaurya.galleryimagepicker.activity.singlecrop.SingleCropActivity"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.ajitmaurya.galleryimagepicker.activity.multi.MultiImagePickerActivity"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="com.ajitmaurya.galleryimagepicker.utils.PickerFileProvider"
+            android:authorities="${applicationId}.picker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_file_paths" />
+        </provider>
+    </application>
+
+
+
+</manifest>
