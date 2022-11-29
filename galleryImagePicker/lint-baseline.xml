@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.3.1" type="baseline" client="gradle" dependencies="false" name="AGP (7.3.1)" variant="all" version="7.3.1">
+
+    <issue
+        id="RecyclerView"
+        message="Do not treat position as fixed; only use immediately and call `holder.getAdapterPosition()` to look it up later"
+        errorLine1="    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/adapter/PickerFolderAdapter.java"
+            line="54"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="RecyclerView"
+        message="Do not treat position as fixed; only use immediately and call `viewHolder.getAdapterPosition()` to look it up later"
+        errorLine1="    public void onBindViewHolder(@NonNull final PickerItemAdapter.ItemViewHolder viewHolder, final int position) {"
+        errorLine2="                                                                                             ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/adapter/PickerItemAdapter.java"
+            line="91"
+            column="94"/>
+    </issue>
+
+    <issue
+        id="ScopedStorage"
+        message="WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+"
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; />"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="15"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        file = new File(file, fileName + &quot;.&quot; + compressFormat.toString().toLowerCase());"
+        errorLine2="                                                                         ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PBitmapUtils.java"
+            line="144"
+            column="74"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        String suffix = &quot;.&quot; + compressFormat.toString().toLowerCase();"
+        errorLine2="                                                        ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PBitmapUtils.java"
+            line="169"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        if (TextUtils.equals(brand.toLowerCase(), &quot;redmi&quot;) || TextUtils.equals(brand.toLowerCase(), &quot;xiaomi&quot;)) {"
+        errorLine2="                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PPermissionUtils.java"
+            line="95"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        if (TextUtils.equals(brand.toLowerCase(), &quot;redmi&quot;) || TextUtils.equals(brand.toLowerCase(), &quot;xiaomi&quot;)) {"
+        errorLine2="                                                                                     ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PPermissionUtils.java"
+            line="95"
+            column="86"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        } else if (TextUtils.equals(brand.toLowerCase(), &quot;meizu&quot;)) {"
+        errorLine2="                                          ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PPermissionUtils.java"
+            line="97"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        } else if (TextUtils.equals(brand.toLowerCase(), &quot;huawei&quot;) || TextUtils.equals(brand.toLowerCase(), &quot;honor&quot;)) {"
+        errorLine2="                                          ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PPermissionUtils.java"
+            line="99"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        } else if (TextUtils.equals(brand.toLowerCase(), &quot;huawei&quot;) || TextUtils.equals(brand.toLowerCase(), &quot;honor&quot;)) {"
+        errorLine2="                                                                                             ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PPermissionUtils.java"
+            line="99"
+            column="94"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 29 (current min is 21): `android.provider.MediaStore.MediaColumns#DURATION`"
+        errorLine1="    static final String DURATION = MediaStore.MediaColumns.DURATION;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaStoreConstants.java"
+            line="19"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="InternalInsetResource"
+        message="Using internal inset dimension resource `status_bar_height` is not supported"
+        errorLine1="            int resourceId = activity.getResources().getIdentifier(&quot;status_bar_height&quot;, &quot;dimen&quot;, &quot;android&quot;);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PStatusBarUtil.java"
+            line="183"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="PrivateApi"
+        message="Accessing internal APIs via reflection is not supported and may not work on all devices or in the future"
+        errorLine1="            Class&lt;?> c = Class.forName(&quot;android.util.FtFeature&quot;);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PStatusBarUtil.java"
+            line="62"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="PrivateApi"
+        message="Accessing internal APIs via reflection is not supported and may not work on all devices or in the future"
+        errorLine1="            Class&lt;?> c = Class.forName(&quot;android.os.SystemProperties&quot;);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PStatusBarUtil.java"
+            line="96"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="                long bucketId = albums.getLong(albums.getColumnIndex(COLUMN_BUCKET_ID));"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="87"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="                    long bucketId = albums.getLong(albums.getColumnIndex(COLUMN_BUCKET_ID));"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="99"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="                    long fileId = albums.getLong(albums.getColumnIndex(_ID));"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="103"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="                    String bucketDisplayName = albums.getString(albums.getColumnIndex(COLUMN_BUCKET_DISPLAY_NAME));"
+        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="104"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="        long id = cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID));"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="136"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="        String mimeType = cursor.getString(cursor.getColumnIndex(MIME_TYPE));"
+        errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/data/MediaSetsLoader.java"
+            line="137"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="            int id = cursor.getInt(cursor.getColumnIndex(MediaStore.MediaColumns._ID));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PBitmapUtils.java"
+            line="370"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="Range"
+        message="Value must be ≥ 0 but `getColumnIndex` can be -1"
+        errorLine1="            int id = cursor.getInt(cursor.getColumnIndex(MediaStore.MediaColumns._ID));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PBitmapUtils.java"
+            line="384"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(getContext()).inflate(R.layout.picker_item_camera, null);"
+        errorLine2="                                                                                           ~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/redbook/RedBookItemView.java"
+            line="68"
+            column="92"/>
+    </issue>
+
+    <issue
+        id="QueryPermissionsNeeded"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this \&#xA;method; see https://g.co/dev/packagevisibility for details"
+        errorLine1="                        .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/helper/CameraCompat.java"
+            line="136"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="QueryPermissionsNeeded"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this \&#xA;method; see https://g.co/dev/packagevisibility for details"
+        errorLine1="                        .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/helper/CameraCompat.java"
+            line="154"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="            int resourceId = activity.getResources().getIdentifier(&quot;status_bar_height&quot;, &quot;dimen&quot;, &quot;android&quot;);"
+        errorLine2="                                                     ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PStatusBarUtil.java"
+            line="183"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            drawable = getResources().getDrawable(resId);"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/widget/cropimage/CropImageView.java"
+            line="187"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        stateBtn.setImageDrawable(getResources().getDrawable(uiConfig.getFullIconID()));"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="217"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mTvFullOrGap.setCompoundDrawablesWithIntrinsicBounds(getResources()."
+        errorLine2="                                                             ^">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="218"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            stateBtn.setImageDrawable(getResources().getDrawable(uiConfig.getFitIconID()));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="532"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            stateBtn.setImageDrawable(getResources().getDrawable(uiConfig.getFullIconID()));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="535"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mTvFullOrGap.setCompoundDrawablesWithIntrinsicBounds(getResources()."
+        errorLine2="                                                             ^">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="606"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mTvFullOrGap.setCompoundDrawablesWithIntrinsicBounds(getResources()."
+        errorLine2="                                                             ^">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="616"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        checkBoxDrawable.addState(new int[]{android.R.attr.state_selected},checkBox.getResources().getDrawable(selectedDrawableID) );"
+        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PCornerUtils.java"
+            line="143"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        checkBoxDrawable.addState(new int[]{android.R.attr.state_checked}, checkBox.getResources().getDrawable(selectedDrawableID));"
+        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PCornerUtils.java"
+            line="144"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        checkBoxDrawable.addState(new int[]{}, checkBox.getResources().getDrawable(unSelectedDrawableID));"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PCornerUtils.java"
+            line="145"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mVideoImg.setImageDrawable(getResources().getDrawable(R.mipmap.picker_icon_video));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/base/PreviewControllerView.java"
+            line="116"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mTvIndex.setBackground(getResources().getDrawable(R.mipmap.picker_icon_unselect));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/redbook/RedBookItemView.java"
+            line="119"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mArrowImg.setImageDrawable(getResources().getDrawable(imageSetArrowIconID));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/redbook/RedBookTitleBar.java"
+            line="50"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            videoBitmap = ((BitmapDrawable) getResources().getDrawable(R.mipmap.picker_item_video)).getBitmap();"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/widget/ShowTypeImageView.java"
+            line="98"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            pauseImg.setImageDrawable(context.getResources().getDrawable(uiConfig.getVideoPauseIconID()));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/helper/VideoViewContainerHelper.java"
+            line="43"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        setBackground(getResources().getDrawable(R.drawable.picker_selector_list_item_bg));"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/wx/WXFolderItemView.java"
+            line="44"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        Drawable unSelectDrawable = getResources().getDrawable(R.mipmap.picker_wechat_unselect);"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/wx/WXItemView.java"
+            line="57"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        setCheckBoxDrawable(unSelectDrawable, getResources().getDrawable(R.mipmap.picker_wechat_select));"
+        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/wx/WXItemView.java"
+            line="59"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        ivBack.setImageDrawable(getResources().getDrawable(backIconID));"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/wx/WXTitleBar.java"
+            line="146"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="        mSetArrowImg.setImageDrawable(getResources().getDrawable(imageSetArrowIconID));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/wx/WXTitleBar.java"
+            line="194"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="                android:drawableStart=&quot;@mipmap/picker_icon_haswhite&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_activity_multi_crop.xml"
+            line="63"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTopCompat` instead of `android:drawableTop`"
+        errorLine1="        android:drawableTop=&quot;@mipmap/picker_ic_camera&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item_camera.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        imageGridAdapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="340"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        imageGridAdapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="371"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        folderAdapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="393"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="            imageGridAdapter.notifyDataSetChanged();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="715"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="            imageGridAdapter.notifyDataSetChanged();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/crop/MultiImageCropFragment.java"
+            line="776"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        mImageSetAdapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/multi/MultiImagePickerFragment.java"
+            line="238"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        mAdapter.notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/multi/MultiImagePickerFragment.java"
+            line="432"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                mAdapter.notifyDataSetChanged();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/multi/MultiImagePickerFragment.java"
+            line="447"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                            mAdapter.notifyDataSetChanged();"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/activity/multi/MultiImagePickerFragment.java"
+            line="472"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/adapter/MultiPreviewAdapter.java"
+            line="34"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/adapter/PickerFolderAdapter.java"
+            line="39"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/adapter/PickerItemAdapter.java"
+            line="174"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="            adapter.notifyDataSetChanged();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/views/base/PickerItemView.java"
+            line="76"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="            if (Build.VERSION.SDK_INT &lt; 21) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/helper/CameraCompat.java"
+            line="134"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="            if (Build.VERSION.SDK_INT &lt; 21) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/helper/CameraCompat.java"
+            line="152"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 21"
+        errorLine1="        if (Build.VERSION.SDK_INT &lt; 21) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/ajitmaurya/galleryimagepicker/utils/PStatusBarUtil.java"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_default_titlebar.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_redbook_titlebar.xml"
+            line="17"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_close_24` appears to be unused"
+        errorLine1="&lt;vector android:height=&quot;24dp&quot; android:tint=&quot;#000000&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_baseline_close_24.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.picker_icon_item_photo` appears to be unused">
+        <location
+            file="src/main/res/mipmap/picker_icon_item_photo.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.picker_item_image_set` appears to be unused"
+        errorLine1="&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/picker_item_image_set.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.popupwindow_anim_style` appears to be unused"
+        errorLine1="    &lt;style name=&quot;popupwindow_anim_style&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/values.xml"
+            line="51"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.video_play_small` appears to be unused">
+        <location
+            file="src/main/res/mipmap/video_play_small.png"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageButton"
+        errorLine2="             ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_activity_multi_crop.xml"
+            line="43"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_default_titlebar.xml"
+            line="30"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_default_titlebar.xml"
+            line="39"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_folder_item.xml"
+            line="8"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_folder_item.xml"
+            line="47"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_image_grid_item.xml"
+            line="51"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item.xml"
+            line="7"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item_image_set.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_redbook_titlebar.xml"
+            line="8"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_redbook_titlebar.xml"
+            line="36"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_wx_crop_titlebar.xml"
+            line="7"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="KeyboardInaccessibleWidget"
+        message="&apos;clickable&apos; attribute found, please also add &apos;focusable&apos;"
+        errorLine1="    android:clickable=&quot;true&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item_image_set.xml"
+            line="9"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;留白&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;留白&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_activity_multi_crop.xml"
+            line="68"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;135&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;135&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item_image_set.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;1&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;1&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_redbook_titlebar.xml"
+            line="68"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`FrameLayout-5` can overlap `@id/iv_back` if FrameLayout-5 grows due to localized text expansion"
+        errorLine1="    &lt;FrameLayout"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_default_titlebar.xml"
+            line="46"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`FrameLayout-5` can overlap `@id/mTitleRoot` if FrameLayout-5 grows due to localized text expansion"
+        errorLine1="    &lt;FrameLayout"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_default_titlebar.xml"
+            line="46"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`LinearLayout-3` can overlap `@id/mTvSelectNum` if LinearLayout-3 grows due to localized text expansion"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_redbook_titlebar.xml"
+            line="17"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/tv_rightBtn` can overlap `@id/tv_title` if @string/picker_str_title_crop, @string/picker_str_title_crop_right grow due to localized text expansion"
+        errorLine1="    &lt;TextView"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_wx_crop_titlebar.xml"
+            line="28"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/mSelectCheckBox` can overlap `@id/mOriginalCheckBox` if @string/picker_str_bottom_original, @string/picker_str_bottom_choose grow due to localized text expansion"
+        errorLine1="        &lt;CheckBox"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_wx_preview_bottombar.xml"
+            line="45"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="            android:paddingStart=&quot;15dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_activity_multipick.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry"
+        errorLine1="        android:paddingEnd=&quot;5dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_item.xml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry"
+        errorLine1="            android:paddingStart=&quot;4dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/picker_wx_preview_bottombar.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+</issues>
